@@ -261,5 +261,5 @@ Per ogni scenario descritto precedentemente, è presente il corrispettivo assura
 11. Altri test al di fuori degli scenari: 
 
     + TestAllMedicsPage, TestAllPatientsPage per accedere come amministratore 
-    alle liste di medici e pazienti
+    alle liste di medici e pazienti.
     + TestMedicLogOut, TestPatientLogOut per testare il logout dal sistema.
