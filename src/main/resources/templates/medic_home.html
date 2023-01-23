@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+</head>
+<body>
+    <header class="header">
+        <a href="medic_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+        <nav class="navbar">
+            <a href="medic_home">home</a>
+            <a href="medic_prescriptions">prescriptions</a>
+            <a href="all_patients_medic">Add new Prescription</a>
+            <a href="login">Log Out</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </header>
+    <div class="services" id="services">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <h1 class="heading"><span name="medic" th:text="'Doctor '+${medic.getSurname()}"></span> </h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+
+        <div class="box-container">
+
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Profile infos</h3>
+                <p>Show your profile informations</p>
+                <a href="medic_info" class="btn"> about me <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+<!--                <i class="fas fa-user-md"></i>-->
+                <i class="fas fa-list"></i>
+                <h3>Prescriptions</h3>
+                <p>Show established prescriptions</p>
+                <a href="medic_prescriptions" class="btn"> show <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+            <div class="box">
+                <i class="fa fa-plus-square"></i>
+                <h3>Add Prescription</h3>
+                <p>Add prescription to a patient</p>
+                <a href="all_patients_medic" class="btn"> add <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+
+            <div class="box">
+                <i class="fas fa-sign-out-alt"></i>
+                <h3>Log Out</h3>
+                <br>
+                <a href="login" class="btn"> log out <span class="fas fa-chevron-right"></span> </a>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+</html>

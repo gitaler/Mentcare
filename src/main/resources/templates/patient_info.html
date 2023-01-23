@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+</head>
+<header class="header">
+
+    <a href="patient_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+    <nav class="navbar">
+        <a href="patient_home">home</a>
+        <a href="patient_info">about me</a>
+        <a href="prescriptions">prescriptions</a>
+        <a href="login">logout</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<body>
+<div class="info">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="heading"><span name="patient" th:text="${patient.name}+' '+${patient.surname}"></span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-hospital-user"></i>
+            <h3>Profile Information</h3>
+            <p th:text="'Name: ' + ${patient.getName()}"> Name </p>
+            <p th:text="'Surname: ' + ${patient.getSurname()}"> Surname </p>
+            <p th:text="'Telephone: ' + ${patient.getTelephone()}"> Telephone </p>
+            <p th:text="'Age: ' + ${patient.getAge()}"> Telephone </p>
+            <p th:text="'Diagnosis: ' + ${patient.getDiagnosis()}"> Diagnosis </p>
+            <p th:text="'Facility: ' + ${patient.getFacility()}"> Facility </p>
+            <p th:text="'Ward: ' + ${patient.getWard()}"> Ward </p>
+            <a href="prescriptions">My Prescriptions</a>
+        </div>
+    </div>
+</div>
+</body>
+</html>

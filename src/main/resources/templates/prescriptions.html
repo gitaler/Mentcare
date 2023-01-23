@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prescriptions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+</head>
+<body>
+<header class="header">
+
+    <a href="patient_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+    <nav class="navbar">
+        <a href="patient_home">home</a>
+        <a href="patient_info">about me</a>
+        <a href="prescriptions">prescriptions</a>
+        <a href="login">logout</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+
+
+<div class="prescriptions">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="heading"><span>My prescriptions</span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="box-container">
+        <table class="content-table">
+            <thead>
+            <tr>
+                <th>Drug</th>
+                <th>Quantity</th>
+                <th>Description</th>
+                <th>Medic</th>
+                <th>Date</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="prescription: ${prescriptions}">
+                <td th:text="${prescription.getDrug()}"><b>Drug </b></td>
+                <td th:text="${prescription.getQuantity()}"> Quantity </td>
+                <td th:text="${prescription.getDescription()}"> Description </td>
+                <td th:text="${prescription.getMedic()}"> medic </td>
+                <td th:text="${prescription.getDate()}"> date </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>

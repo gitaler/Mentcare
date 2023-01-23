@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Patient </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+
+    <a href="admin_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+    <nav class="navbar">
+        <a href="admin_home">home</a>
+        <a href="all_medics_list">all medics</a>
+        <a href="add_new_medic">new medic</a>
+        <a href="all_patients_list">all patients</a>
+        <a href="add_new_patient">new patient</a>
+        <a href="admin_login">logout</a>
+    </nav>
+</header>
+
+    <div class="infoprescriptions">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1 class="heading"> <span>add new patient</span></h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="box-container">
+            <div class="box">
+                <form action="create_patient" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id = "name" name="name" placeholder= "Name" />
+                    <label for="surname">Surname:</label>
+                    <input type="text" id="surname" name="surname" placeholder="Surname" />
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" placeholder= "Password" />
+                    <label for="telephone">Telephone:</label>
+                    <input type="text" id="telephone" name="telephone" placeholder="Telephone" />
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" name="age" placeholder="Age" />
+                    <label for="diagnosis">Diagnosis:</label>
+                    <input type="text" id="diagnosis" name="diagnosis" placeholder="Diagnosis"/>
+                    <label for="facility">Facility:</label>
+                    <input type="text" id="facility" name="facility" placeholder="Facility" />
+                    <label for="ward">Ward:</label>
+                    <input type="text" id="ward" name="ward" placeholder="Ward"/>
+
+                    <p name="error" class="error" th:text="${error}"></p>
+                    <br>
+                    <input type="submit" name="submit" value="Submit" class="btn">
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

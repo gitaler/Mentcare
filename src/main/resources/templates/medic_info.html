@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medic Info</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+
+</head>
+<header class="header">
+
+    <a href="medic_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+    <nav class="navbar">
+        <a href="medic_home">home</a>
+        <a href="medic_prescriptions">prescriptions</a>
+        <a href="all_patients_medic">Add new Prescription</a>
+        <a href="login">Log Out</a>
+    </nav>
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<body>
+
+    <div class="info">
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <h1 class="heading"><span name="medic" th:text="'Doctor '+${medic.getSurname()}"></span> </h1>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <div class="box-container">
+            <div class="box">
+                <i class="fas fa-user-md"></i>
+                <h3>Profile Information</h3>
+                <p th:text="'Name: ' + ${medic.getName()}"> Name </p>
+                <p th:text="'Surname: ' + ${medic.getSurname()}"> Surname </p>
+                <p th:text="'Telephone: ' + ${medic.getTelephone()}"> Telephone </p>
+                <p th:text="'Specialization: ' + ${medic.getSpecialization()}"> Specialization </p>
+            </div>
+        </div>
+    </div>
+
+    <a href="medic_home"> home </a>
+</body>
+</html>

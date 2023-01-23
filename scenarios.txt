@@ -1,0 +1,14 @@
+1-Medico e paziente possono vedere le proprie informazioni accedendo al sistema e entrando nella sezione info
+
+2-Medico può consultare la lista dei pazienti dettagliata e modificare le informazioni di ciascun paziente relative alla terapia/ stato avanzamento malattia
+
+3-Il paziente può visionare i farmaci prescritti
+
+4-Il medico da appuntamenti ai pazienti stilando un report dell avanzamento della malattia e modificando eventualmente la terapia.
+I pazienti possono consultare la lista degli appuntamenti dal menu appuntamenti.
+
+5-L'amministratore di sistema può cancellare/aggiungere/modificare i dati senbili dei pazienti 
+
+6-L'amministratore di sistema può cancellare/aggiungere/modificare i dati senbili dei medici
+
+7-L' amministratore ha accesso ai log di sistema e controlla le attività sul sistema.

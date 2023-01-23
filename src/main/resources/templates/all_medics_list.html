@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medics list</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+
+</head>
+<body>
+<header class="header">
+
+    <a class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+    <nav class="navbar">
+        <a href="admin_home">home</a>
+        <a href="all_medics_list">all medics</a>
+        <a href="add_new_medic">new medic</a>
+        <a href="all_patients_list">all patients</a>
+        <a href="add_new_patient">new patient</a>
+        <a href="admin_login">logout</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<div class="list" >
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="heading"><span>medic list</span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <table border="1" class="content-table">
+        <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Surname</th>
+            <th>Telephone</th>
+            <th>Specialization</th>
+            <th>Edit</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each="medic: ${medics}">
+            <td th:text="${medic.getId()}"> <b>10 </b></td>
+            <td th:text="${medic.getName()}"> John </td>
+            <td th:text="${medic.getSurname()}"> Smith </td>
+            <td th:text="${medic.getTelephone()}"> Smith </td>
+            <td th:text="${medic.getSpecialization()}"> Smith </td>
+            <td> <a th:href="@{edit_medic(id=${medic.getId()})}"> edit </a></td>
+
+        </tr>
+        </tbody>
+    </table>
+    <p name="error" class="error" th:text="${error}"></p>
+    <a href="add_new_medic" class="btn"> Add new medic <span class="fas fa-chevron-right"></span> </a>
+</div>
+
+</body>
+</html>

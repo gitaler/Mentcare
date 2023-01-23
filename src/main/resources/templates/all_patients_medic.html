@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Patients list</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+
+</head>
+<body>
+<header class="header">
+
+  <a href="medic_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+  <nav class="navbar">
+    <a href="medic_home">home</a>
+    <a href="medic_prescriptions">prescriptions</a>
+    <a href="all_patients_medic">Add new Prescription</a>
+    <a href="login">Log Out</a>
+  </nav>
+</header>
+<div class="list" >
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+    <h1 class="heading"><span>Patient list </span></h1>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+    <table class="content-table">
+      <thead>
+      <tr>
+
+        <th>Name</th>
+        <th>Surname</th>
+        <th>Age</th>
+        <th>Telephone</th>
+        <th>Diagnosis</th>
+        <th>Add Prescription</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr th:each="patient: ${patients}">
+          <td th:text="${patient.getName()}"> John </td>
+          <td th:text="${patient.getSurname()}"> Smith </td>
+          <td th:text="${patient.getAge()}"> 10 </td>
+          <td th:text="${patient.getTelephone()}"> +39 000000000 </td>
+          <td th:text="${patient.getDiagnosis()}"> ill </td>
+          <td> <a th:href="@{add_prescription(idPatient=${patient.getId()})}"> add Prescription </a></td>
+        </tr>
+      </tbody>
+    </table>
+
+</div>
+</body>
+</html>

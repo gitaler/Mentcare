@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Patient Home</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+</head>
+<header class="header">
+
+    <a href="patient_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+    <nav class="navbar">
+        <a href="patient_home">home</a>
+        <a href="patient_info">about me</a>
+        <a href="prescriptions">prescriptions</a>
+        <a href="login">logout</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<body>
+<div class="services" id="services">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="heading"><span name="patient" th:text="${patient.name}+' '+${patient.surname}"></span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="box-container">
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>Profile infos</h3>
+            <p>Show your profile informations</p>
+            <a href="patient_info" class="btn"> about me<span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-pills"></i>
+            <h3>Terapy</h3>
+            <p>Show your prescriptions list</p>
+            <a href="prescriptions" class="btn"> prescriptions <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-sign-out-alt"></i>
+            <h3>Log Out</h3>
+            <br>
+            <a href="login" class="btn"> log out <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

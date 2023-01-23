@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Add Report </title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+<header class="header">
+
+  <a href="medic_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+  <nav class="navbar">
+    <a href="medic_home">home</a>
+    <a href="medic_prescriptions">prescriptions</a>
+    <a href="all_patients_medic">Add new Prescription</a>
+    <a href="login">Log Out</a>
+  </nav>
+</header>
+<div class="infoprescriptions">
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <h1 class="heading"><span> add new prescription </span></h1>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="box-container">
+    <div class="box">
+      <h3>Patient's Prescription</h3>
+      <form action="addPrescription" method="post">
+        <input type="text" name="idPatient" style="display: none" th:value="${patient.getId()}"/>
+        <label for="patient">Patient:</label>
+        <input id="patient" type="text" name="patient" placeholder= "Drug" th:value="${patient.getCompleteName()}" readonly/>
+        <label for="drug">Drug:</label>
+        <input id="drug" type="text" name="drug" placeholder= "Drug"/>
+        <label for="quantity">Quantity:</label>
+        <input id="quantity" type="text" name="quantity" placeholder="Quantity" />
+        <label for="description">Description:</label>
+        <input id="description" type="text" name="description" placeholder= "Description" />
+        <label for="medic">Medic:</label>
+        <input id="medic" type="text" name="medic" placeholder= "Medic" th:value="${medic.toString()}" readonly/>
+        <br>
+        <input type="submit" value="Submit" class="btn"/>
+      </form>
+      <p name="error" class="error" th:text="${success}"></p>
+      <p name="error" class="error" th:text="${error}"></p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

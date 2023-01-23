@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css" th:href="@{css/style.css}">
+</head>
+<body>
+<header class="header">
+
+    <a href="admin_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+    <nav class="navbar">
+        <a href="admin_home">home</a>
+        <a href="all_medics_list">all medics</a>
+        <a href="add_new_medic">new medic</a>
+        <a href="all_patients_list">all patients</a>
+        <a href="add_new_patient">new patient</a>
+        <a href="admin_login">logout</a>
+    </nav>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+</header>
+<div class="services" id="services">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <h1 class="heading"> <span>Administration Page</span> </h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+
+    <div class="box-container">
+
+        <div class="box">
+            <i class="fas fa-notes-medical"></i>
+            <h3>All Patients</h3>
+            <p>Show all patients active</p>
+            <a href="all_patients_list" class="btn"> patients <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-user-md"></i>
+            <h3>All Medics</h3>
+            <p>Show all medics active</p>
+            <a href="all_medics_list" class="btn"> medics <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+        <div class="box">
+            <i class="fas fa-sign-out-alt"></i>
+            <h3>Log Out</h3>
+            <br>
+            <a href="admin_login" class="btn"> log out <span class="fas fa-chevron-right"></span> </a>
+        </div>
+
+    </div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LogIn into Medcare's </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+
+    <a href="login" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+
+</header>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<section class="login" id="login">
+
+    <h1 class="heading"> <span>LOG IN</span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="row">
+        <form action="create" method="post">
+            <h3> Log in as Patient or Medic</h3>
+            <input type="text" name="username" placeholder="Username" class="box">
+            <input type="password" name="password" placeholder= "Password"class="box">
+            <div id="patientboxcontainer" class="container">
+                <label for="patientbox">Patient
+                    <input type="radio" checked="checked" name="login" id="patientbox"class="box" value="patient">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+
+            <div id="medicboxcontainer" class="container">
+                <label for="medicbox">Medic
+                    <input type="radio" name="login" id="medicbox" class="box" value="medic">
+                    <span class="checkmark"></span>
+                </label>
+            </div>
+            <p name="error" class="error" th:text="${error}"></p>
+            <br>
+            <input type="submit" value="Submit" class="btn">
+
+        </form>
+
+    </div>
+
+</section>
+
+</body>
+</html>

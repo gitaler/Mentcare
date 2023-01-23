@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add new Medic </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<header class="header">
+
+    <a href="admin_home" class="logo"> <i class="fas fa-heartbeat"></i> Mentcare </a>
+    <nav class="navbar">
+        <a href="admin_home">home</a>
+        <a href="all_medics_list">all medics</a>
+        <a href="add_new_medic">new medic</a>
+        <a href="all_patients_list">all patients</a>
+        <a href="add_new_patient">new patient</a>
+        <a href="admin_login">logout</a>
+    </nav>
+</header>
+
+<div class="infoprescriptions">
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <h1 class="heading"> <span>add new medic</span></h1>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <div class="box-container">
+        <div class="box">
+            <form action="create_medic" method="post">
+                <input type="text" name="id" style="display: none"/>
+                <label for="name">Name:</label>
+                <input type="text" id ="name"name="name" placeholder= "Name" />
+                <label for="surname">Surname:</label>
+                <input type="text" id="surname" name="surname" placeholder="Surname" />
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" placeholder= "Password" />
+                <label for="telephone">Telephone:</label>
+                <input type="text" id="telephone" name="telephone" placeholder="Telephone" />
+                <label for="specialization">Specialization:</label>
+                <input type="text" id="specialization" name="specialization" placeholder="Specialization" />
+                <br>
+                <input type="submit" value="Submit" class="btn"/>
+            </form>
+            <p name="error" class="error" th:text="${error}"></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>
