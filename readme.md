@@ -101,7 +101,7 @@ In caso di input non accettabili, il sistema fornirà una stringa di errore spec
 La registrazione non avverrà fino che tutti i campi inseriti non risultano accettabili per il sistema.
 
 **Stato del sistema al termine:** Il medico è stato correttamente registrato nel sistema e potrà eseguire l'accesso tramite le
-credenziali fornite. Al termine dell'operazione , l' amministratore viene rimandato alla pagina con la lista dei medici "All Medics", dove potrà controllare l'avvenuta aggiunta del medico controllando la lista.
+credenziali fornite. Al termine dell'operazione, l' amministratore viene rimandato alla pagina con la lista dei medici "All Medics", dove potrà controllare l'avvenuta aggiunta del medico controllando la lista.
 
 
 ### 4. Modifica Medico
