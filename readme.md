@@ -248,7 +248,18 @@ come metodi per la gestione dei Cookies e i vari Getter e Setter autogenerati.
   test di login.
 Per ogni scenario descritto precedentemente, è presente il corrispettivo assurance test.
 
+1. Aggiunta Paziente: TestAddNewPatient
+2. Modifica Paziente: TestEditPatient
+3. Aggiunta Medico: TestAddNewMedic
+4. Modifica Medico: TestEditMedic
+5. Aggiunta prescrizione: TestMedicAddPrescription
+6. Modifica/Cancellazione prescrizione: TestMedicEditPrescription, TestMedicDeletePrescription
+7. Visualizzazione dei farmaci prescritti (Paziente): TestPatientPrescriptions
+8. Visualizzazione dei farmaci prescritti (Medico): TestMedicInfo.testMedicPrescriptionList
+9. Visualizzazione delle proprie informazioni(Paziente/Medico): TestPatientInfo, TestMedicInfo
+10. Login(Paziente/Medico/Amministratore): TestLogin(Paziente/Medico), TestAdminLogin(Admin)
+11. Altri test al di fuori degli scenari: 
 
-
-
-  
+    + TestAllMedicsPage, TestAllPatientsPage per accedere come amministratore 
+    alle liste di medici e pazienti
+    + TestMedicLogOut, TestPatientLogOut per testare il logout dal sistema.
