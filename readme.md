@@ -1,6 +1,6 @@
 # Documentazione "Mentcare" 
 
-(Alessandro Rodeghero VR474699)
+(Alessandro Rodeghero VR*****)
 
 ## Introduzione
 Il progetto scelto è il sistema informativo "MentCare" realizzato come una webApp con framework Java Spring con pattern architetturale MVC.
